@@ -65,9 +65,13 @@ whois
 For Web Interface
 -streamlit
 
+Tap on 'Open in Streamlikt' button to use the web application
 
-https://sentinel-your-ai-guardian-against-fake-news-phishing-k9uf2utqn.streamlit.app/
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://krishi-jnan-mxvlhad4zmbyyb89js8twa.streamlit.app/](https://sentinel-your-ai-guardian-against-fake-news-phishing-k9uf2utqn.streamlit.app/))
+
 ## Author
 Kirana BV
+
 kiranaish15@gmail.com
+
 linkedin.com/in/kirana-BV0106
