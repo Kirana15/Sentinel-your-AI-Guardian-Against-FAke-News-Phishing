@@ -8,4 +8,9 @@ selenium
 webdriver-manager
 google-generativeai
 googlesearch-python
+beautifulsoup4
+requests
+google-generativeai
 whois
+
+
