@@ -3,7 +3,7 @@ from googlesearch import search
 import requests
 from bs4 import BeautifulSoup
 
-GEMINI_API_KEY = "AIzaSyBlo-ZQLSJrkBHQcM73O2dvYDyZu50MmA0"
+GEMINI_API_KEY = "API_KEY"
 genai.configure(api_key=GEMINI_API_KEY)
 
 def fetch_related_articles(query, num_results=5):
@@ -35,4 +35,5 @@ def analyze_with_gemini(user_input, articles):
     Give a short 2-3 sentence explanation.
     """
     response = model.generate_content(prompt)
+
     return response.text.strip()
