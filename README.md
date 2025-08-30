@@ -3,23 +3,20 @@
 A web application that detects malicious (phishing) URLs and fake news articles to help users stay safe from cyber threats and misinformation. The system leverages NLP, and Generative Artificial intelligence  APIs to analyze URLs and news content in real-time.
 
 ## Features
-Phishing Link Detection
+->Phishing Link Detection
+
 Checks URLs for suspicious patterns, subdomains, and redirections
 Uses SSL/TLS certificate verification, WHOIS info, and IP reputation
-
 Integrates with Gemini APi to get better verdicts.
 
-📰 Fake News Detection
+->Fake News Detection
 
 Implements Gemini APi to understand the nuances better, and uses google search tool to fetch the available articles regarding the news given as input. 
 
- Interactive Web App
+->Interactive Web App
 
-Built with Streamlit for user-friendly interaction
+Built with Streamlit for user-friendly interaction. Simple input forms for URLs & news articles. Clear, visual output with detection results
 
-Simple input forms for URLs & news articles
-
-Clear, visual output with detection results
 ## How it works
 1 User Input
 
@@ -47,19 +44,19 @@ Verdict: Safe , suspicious , phishing
 ├── requirements.txt      
 └── README.md     
 ## Requirements
- streamlit
-streamlit-option-menu
-streamlit-lottie
-pillow
-requests
-beautifulsoup4
-selenium
-googlesearch-python
-webdriver-manager
-google-generativeai
-beautifulsoup4
-requests
-google-generativeai
+ streamlit,
+streamlit-option-menu,
+streamlit-lottie,
+pillow,
+requests,
+beautifulsoup4,
+selenium,
+googlesearch-python,
+webdriver-manager,
+google-generativeai,
+beautifulsoup4,
+requests,
+google-generativeai,
 whois
 
 For Web Interface
