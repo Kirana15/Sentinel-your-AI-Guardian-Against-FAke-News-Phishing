@@ -13,7 +13,7 @@ Integrates with Gemini APi to get better verdicts.
 
 Implements Gemini APi to understand the nuances better, and uses google search tool to fetch the available articles regarding the news given as input. 
 
-📊 Interactive Web App
+ Interactive Web App
 
 Built with Streamlit for user-friendly interaction
 
