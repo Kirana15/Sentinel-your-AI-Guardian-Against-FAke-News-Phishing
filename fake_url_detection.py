@@ -1,4 +1,5 @@
 import whois
+import streamlit as st
 import google.generativeai as genai
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -69,4 +70,5 @@ def phishing_detector(url):
     verdict = gemini_verdict(url, page_data, whois_data)
 
     return page_data, whois_data, verdict
+
 
