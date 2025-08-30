@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-GEMINI_API_KEY = "API_KEY"
+GEMINI_API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
@@ -69,3 +69,4 @@ def phishing_detector(url):
     verdict = gemini_verdict(url, page_data, whois_data)
 
     return page_data, whois_data, verdict
+
