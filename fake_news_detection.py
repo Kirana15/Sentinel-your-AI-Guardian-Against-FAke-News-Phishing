@@ -1,5 +1,6 @@
 import google.generativeai as genai
 from googlesearch import search
+import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
@@ -37,4 +38,5 @@ def analyze_with_gemini(user_input, articles):
     response = model.generate_content(prompt)
 
     return response.text.strip()
+
 
