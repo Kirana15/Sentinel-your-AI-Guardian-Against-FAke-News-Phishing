@@ -229,7 +229,7 @@ Reference:
 
 
     """)
-    with open("cyber_safety_handbook.pdf", "rb") as pdf_file:
+    with open("Cyber-security-tips-by-cyber-dost", "rb") as pdf_file:
         st.download_button(
         label="Cyber-security-tips-by-cyber-dost",
         data=pdf_file,
@@ -250,6 +250,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
