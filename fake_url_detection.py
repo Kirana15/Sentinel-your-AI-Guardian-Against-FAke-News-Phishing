@@ -123,7 +123,8 @@ def phishing_detector(url):
     ssl_data = ssl_info(url)
     verdict = gemini_verdict(url, page_data, whois_data, lexical_data, ssl_data)
 
-     return page_data, whois_data, verdict
+    return page_data, whois_data, verdict
+
 
 
 
