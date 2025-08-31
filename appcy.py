@@ -39,8 +39,8 @@ st.set_page_config(page_title="Sentinel", page_icon="🛡", layout="wide")
 with st.sidebar:
     selected = option_menu(
         menu_title="Sentinel Menu",
-        options=["Home", "Fake News Detection", "Phishing URL Detection", "About"],
-        icons=["house", "newspaper", "link", "info-circle"],
+         options=["Home", "Fake News Detection", "Phishing URL Detection","Notice" , "About"],
+        icons=["house", "newspaper", "link","Article", "info-circle"],
         menu_icon="shield",
         default_index=0
     )
@@ -168,6 +168,68 @@ elif selected == "Phishing URL Detection":
 # ===============================
 # About Page
 # ===============================
+elif selected == "Notice":
+    st.header("Cyber awareness")
+    st.markdown(""""
+    Cyber Awareness and Hygiene
+1. For Parents
+
+Talk & Monitor: Discuss online threats (grooming, bullying, stalking) with children and monitor their online activity. Set clear internet and game usage guidelines.
+
+Watch Behavior Changes: Defensive or secretive behavior may indicate cyber grooming. Engage children in offline activities.
+
+Protect Against Grooming: Explain responsible social media use and ensure strong privacy settings.
+
+Avoid Suspicious Links: Do not click unknown links or attachments to prevent malware infection.
+
+Cover Webcams: Protect against unauthorized observation by covering webcams when not in use.
+
+Install Security Software: Use antivirus and parental control software. Review social media privacy settings.
+
+Update Software: Regularly update OS and applications to patch vulnerabilities. Download apps from trusted sources only.
+
+Secure Browsing: Use updated browsers and safe browsing tools to prevent attacks.
+
+2. For Teens and Young Adults
+
+Secure Online Presence: Use proper privacy settings on social media; share content only with trusted contacts.
+
+Friend Requests & Blocking: Accept requests carefully, know how to block or remove uncomfortable contacts.
+
+Logout & Passwords: Always log out and secure devices with passwords.
+
+Fake Accounts: Report impersonation to social media providers immediately.
+
+Video & Chat Safety: Be cautious on video calls; private chats can be recorded. Avoid taking sensitive photos/videos on cloud-connected devices.
+
+Cyber Stalking Protection: Disable location services, avoid sharing personal info, and consult trusted people if targeted.
+
+Sensitive Browsing: Access banking or shopping sites only from personal, secure devices or networks.
+
+Device Security: Use passwords/PINs, install apps from trusted sources, erase private data before servicing or selling devices.
+
+Report Illegal Content: Report Child Pornography (CP)/Child Sexual Abuse Material (CSAM) to authorities or National Cyber Crime Reporting Portal (www.cybercrime.gov.in
+).
+
+3. For Organizations
+
+HR Policies: Implement clear rules for handling CP/CSAM or sexually explicit material.
+
+Device Usage: Define proper use of organizational devices.
+
+Investigation & Reporting: Investigate and act against employees found possessing obscene content. Report incidents to police and preserve evidence securely.
+
+Legal Compliance: Publishing, collecting, or distributing CP/CSAM is illegal under Sections 67, 67A, and 67B of the IT Act, 2000.
+
+Key Takeaway: Be vigilant, follow safe practices online, and report any illegal or suspicious activity. Be Safe, Browse Safe!
+
+Reference:
+
+[A Handbook for Students on Cyber Safety]
+
+    """)
+
+
 else:
     st.header("About Sentinel")
     st.markdown("""
@@ -176,4 +238,5 @@ else:
         Stay safe online by verifying news and checking suspicious URLs before clicking!
     """)
     image = Image.open("assets/hero_image.jpg")
+
     st.image(image, width=200)
