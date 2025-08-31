@@ -116,6 +116,7 @@ def gemini_verdict(url, page_data, whois_data, lexical_data, ssl_data):
 def phishing_detector(url):
     """
     Full pipeline: lexical features, page details, WHOIS info, SSL, AI verdict
+    Returns 3 values: page_data, whois_data, verdict
     """
     lexical_data = lexical_features(url)
     page_data = get_page_details(url)
