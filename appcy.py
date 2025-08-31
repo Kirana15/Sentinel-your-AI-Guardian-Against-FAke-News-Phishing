@@ -221,6 +221,12 @@ Legal Compliance: Publishing, collecting, or distributing CP/CSAM is illegal und
 
 Key Takeaway: Be vigilant, follow safe practices online, and report any illegal or suspicious activity. Be Safe, Browse Safe!
 
+⚠ Never share your OTP with anyone – not even with us. We will never ask for your OTP over call, SMS, or email.
+🛡 Protect your account: OTPs are private keys. If someone asks for your OTP, it’s a scam. Report suspicious activity immediately.
+🚨 Warning: Fraudsters may trick you into sharing OTPs. Remember: Genuine organizations never ask for OTPs outside the app. Stay alert, stay safe.
+🔒 Your OTP = Your Digital Identity. Keep it safe. Together, let’s stop OTP fraud and protect our community.
+💡 Did you know? Most online frauds start with OTP sharing. Never share your OTP. If in doubt, report it instantly.
+
 Reference:
 
 [A Handbook for Students on Cyber Safety]
@@ -248,11 +254,23 @@ Download the Cyber Dost – Awareness Document
     
 
 elif selected == "Report Now":
-    st.header("Register or  track complaints ")
+    st.header("Register or Track Complaints")
+
+    # Link to official cybercrime website
     st.markdown(
-    "[Access the official Cyber crime website](https://cybercrime.gov.in/) to register complaints and track ",
-    unsafe_allow_html=True
-)
+        "[Access the official Cyber Crime website](https://cybercrime.gov.in/) to register complaints and track them",
+        unsafe_allow_html=True
+    )
+
+    # Helpline numbers
+    st.markdown("""
+**To report cyber crimes, you can use the following helpline numbers:**
+
+- **1930**: Toll-free number for reporting financial frauds and cyber crimes.  
+- **155260**: Operational from 09:00 AM to 06:00 PM for reporting cyber crime complaints.  
+""")
+
+    
 else:
     st.header("About Sentinel")
     st.markdown("""
@@ -263,6 +281,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
