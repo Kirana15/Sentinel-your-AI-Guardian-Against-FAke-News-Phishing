@@ -39,8 +39,8 @@ st.set_page_config(page_title="Sentinel", page_icon="🛡", layout="wide")
 with st.sidebar:
     selected = option_menu(
         menu_title="Sentinel Menu",
-         options=["Home", "Fake News Detection", "Phishing URL Detection","Notice" , "About"],
-        icons=["house", "newspaper", "link","Article", "info-circle"],
+         options=["Home", "Fake News Detection", "Phishing URL Detection","Notice","Report Now" , "About"],
+        icons=["house", "newspaper", "link","Article","Report", "info-circle"],
         menu_icon="shield",
         default_index=0
     )
@@ -247,7 +247,12 @@ Download the Cyber Dost – Awareness Document
 
     
 
-
+elif selected == "Report Now":
+    st.header("Register or  track complaints ")
+    st.markdown(
+    "[Access the official Cyber crime website](https://cybercrime.gov.in/) to register complaints and track ",
+    unsafe_allow_html=True
+)
 else:
     st.header("About Sentinel")
     st.markdown("""
@@ -258,6 +263,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
