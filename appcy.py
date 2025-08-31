@@ -63,7 +63,7 @@ if selected == "Home":
 
     # Hero Image
     hero_image = Image.open("assets/logo.jpg")
-    st.image(hero_image, use_column_width=True)
+    st.image(hero_image, use_container_width=True)
 
 
 # ===============================
@@ -287,6 +287,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
