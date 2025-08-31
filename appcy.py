@@ -224,15 +224,15 @@ Key Takeaway: Be vigilant, follow safe practices online, and report any illegal 
 st.header("Awareness regarding OTP usage")
 st.markdown("""
 
-⚠ Never share your OTP with anyone – not even with us. We will never ask for your OTP over call, SMS, or email.
+- ⚠ Never share your OTP with anyone – not even with us. We will never ask for your OTP over call, SMS, or email.
 
-🛡 Protect your account: OTPs are private keys. If someone asks for your OTP, it’s a scam. Report suspicious activity immediately.
+- 🛡 Protect your account: OTPs are private keys. If someone asks for your OTP, it’s a scam. Report suspicious activity immediately.
 
-🚨 Warning: Fraudsters may trick you into sharing OTPs. Remember: Genuine organizations never ask for OTPs outside the app. Stay alert, stay safe.
+- 🚨 Warning: Fraudsters may trick you into sharing OTPs. Remember: Genuine organizations never ask for OTPs outside the app. Stay alert, stay safe.
 
-🔒 Your OTP = Your Digital Identity. Keep it safe. Together, let’s stop OTP fraud and protect our community.
+- 🔒 Your OTP = Your Digital Identity. Keep it safe. Together, let’s stop OTP fraud and protect our community.
 
-💡 Did you know? Most online frauds start with OTP sharing. Never share your OTP. If in doubt, report it instantly.
+- 💡 Did you know? Most online frauds start with OTP sharing. Never share your OTP. If in doubt, report it instantly.
 
 Reference:
 
@@ -248,7 +248,7 @@ Download the Cyber Dost – Awareness Document
 
  
 
-    with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
+with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
         st.download_button(
         label="Click here to download",
         data=pdf_file,
@@ -288,6 +288,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
