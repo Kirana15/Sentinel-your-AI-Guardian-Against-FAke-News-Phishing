@@ -5,6 +5,7 @@ pillow
 requests
 beautifulsoup4
 selenium
+pyOpenSSL
 webdriver-manager
 google-generativeai
 googlesearch-python
@@ -12,5 +13,6 @@ beautifulsoup4
 requests
 google-generativeai
 whois
+
 
 
