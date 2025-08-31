@@ -208,8 +208,6 @@ Sensitive Browsing: Access banking or shopping sites only from personal, secure 
 
 Device Security: Use passwords/PINs, install apps from trusted sources, erase private data before servicing or selling devices.
 
-Report Illegal Content: Report Child Pornography (CP)/Child Sexual Abuse Material (CSAM) to authorities or National Cyber Crime Reporting Portal (www.cybercrime.gov.in
-).
 
 3. For Organizations
 
@@ -240,3 +238,4 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
