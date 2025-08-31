@@ -220,8 +220,9 @@ Investigation & Reporting: Investigate and act against employees found possessin
 Legal Compliance: Publishing, collecting, or distributing CP/CSAM is illegal under Sections 67, 67A, and 67B of the IT Act, 2000.
 
 Key Takeaway: Be vigilant, follow safe practices online, and report any illegal or suspicious activity. Be Safe, Browse Safe!
-
-Awareness regarding OTP useage : 
+   """)
+st.header("Awareness regarding OTP usage")
+st.markdown("""
 
 ⚠ Never share your OTP with anyone – not even with us. We will never ask for your OTP over call, SMS, or email.
 
@@ -242,10 +243,10 @@ Download the Cyber Dost – Awareness Document
     Ministry of Home Affairs,  
     Government of India
 
+""")
 
 
-
-    """)
+ 
 
     with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
         st.download_button(
@@ -287,6 +288,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
