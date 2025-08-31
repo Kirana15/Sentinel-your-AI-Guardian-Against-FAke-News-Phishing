@@ -221,6 +221,7 @@ Legal Compliance: Publishing, collecting, or distributing CP/CSAM is illegal und
 
 Key Takeaway: Be vigilant, follow safe practices online, and report any illegal or suspicious activity. Be Safe, Browse Safe!
 
+Awareness regarding OTP useage
 ⚠ Never share your OTP with anyone – not even with us. We will never ask for your OTP over call, SMS, or email.
 
 🛡 Protect your account: OTPs are private keys. If someone asks for your OTP, it’s a scam. Report suspicious activity immediately.
@@ -285,6 +286,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
