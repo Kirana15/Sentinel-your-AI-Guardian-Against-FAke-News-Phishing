@@ -225,7 +225,19 @@ Reference:
 
 [A Handbook for Students on Cyber Safety]
 
+
+
+
     """)
+    with open("cyber_safety_handbook.pdf", "rb") as pdf_file:
+    st.download_button(
+        label="Cyber-security-tips-by-cyber-dost",
+        data=pdf_file,
+        file_name="cyber_safety_handbook.pdf",
+        mime="application/pdf"
+    )
+
+    
 
 
 else:
@@ -238,4 +250,5 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
