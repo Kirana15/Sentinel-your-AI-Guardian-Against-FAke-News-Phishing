@@ -49,15 +49,13 @@ streamlit-option-menu,
 streamlit-lottie,
 pillow,
 requests,
-beautifulsoup4,
-beautiful soup,
 googlesearch-python,
 webdriver-manager,
-google-generativeai,
 beautifulsoup4,
 requests,
 google-generativeai,
-whois
+whois,
+pyOpenSSL
 
 For Web Interface
 -streamlit
