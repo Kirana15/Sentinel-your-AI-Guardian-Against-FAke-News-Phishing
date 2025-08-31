@@ -225,16 +225,16 @@ Reference:
 
 [A Handbook for Students on Cyber Safety]
 
-
-
-
-    """)
-   st.markdown("""
-    Download the Cyber Dost – Awareness Document  
+Download the Cyber Dost – Awareness Document  
     Published by:  
     Ministry of Home Affairs,  
     Government of India
+
+
+
+
     """)
+
     with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
         st.download_button(
         label="Cyber Safety Tips by cyber dost",
@@ -258,6 +258,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
