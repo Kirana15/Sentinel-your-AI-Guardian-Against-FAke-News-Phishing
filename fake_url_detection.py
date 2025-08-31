@@ -132,10 +132,4 @@ def phishing_detector(url):
     }
 
 
-# --- Streamlit Interface ---
-st.title("Fake URL Detector")
-input_url = st.text_input("Enter URL to check:")
 
-if st.button("Check URL") and input_url:
-    result = phishing_detector(input_url)
-    st.json(result)
