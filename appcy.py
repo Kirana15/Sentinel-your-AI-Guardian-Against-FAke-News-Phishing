@@ -249,7 +249,7 @@ Download the Cyber Dost – Awareness Document
 
     with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
         st.download_button(
-        label="Cyber Safety Tips by cyber dost",
+        label="Click here to download",
         data=pdf_file,
         file_name="Cyber-security-tips-by-cyber-dost.pdf",
         mime="application/pdf"
@@ -287,6 +287,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
