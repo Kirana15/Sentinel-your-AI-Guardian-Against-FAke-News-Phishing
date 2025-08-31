@@ -3,11 +3,42 @@ import streamlit as st
 import google.generativeai as genai
 import requests
 from bs4 import BeautifulSoup
+import ssl
+import socket
+import OpenSSL
 
 # 🔑 Secure API key from Streamlit secrets
 GEMINI_API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
+
+
+# --- Lexical Features ---
+def lexical_features(url):
+    features = {}
+    features['has_ip'] = any(c.isdigit() for c in url.split("//")[-1].split("/")[0])
+    features['has_https'] = url.lower().startswith("https://")
+    return features
+
+
+# --- SSL Certificate Info ---
+def ssl_info(url):
+    try:
+        hostname = url.split("//")[-1].split("/")[0]
+        ctx = ssl.create_default_context()
+        with ctx.wrap_socket(socket.socket(), server_hostname=hostname) as s:
+            s.settimeout(5)
+            s.connect((hostname, 443))
+            cert = s.getpeercert(binary_form=True)
+            x509 = OpenSSL.crypto.load_certificate(OpenSSL.crypto.FILETYPE_ASN1, cert)
+            return {
+                "subject": dict(x509.get_subject().get_components()),
+                "issuer": dict(x509.get_issuer().get_components()),
+                "not_before": x509.get_notBefore().decode(),
+                "not_after": x509.get_notAfter().decode()
+            }
+    except Exception as e:
+        return {"error": str(e)}
 
 
 def get_page_details(url):
@@ -54,7 +85,7 @@ def check_whois(url):
         return {"error": f"WHOIS lookup failed: {str(e)}"}
 
 
-def gemini_verdict(url, page_data, whois_data):
+def gemini_verdict(url, page_data, whois_data, lexical_data, ssl_data):
     """
     Use Gemini AI to analyze phishing risk
     """
@@ -62,11 +93,12 @@ def gemini_verdict(url, page_data, whois_data):
     Analyze this website for phishing risk:
 
     URL: {url}
+    Lexical Features: {lexical_data}
     Page Title: {page_data.get('title')}
     Login Field Present: {page_data.get('has_login')}
     Page Error: {page_data.get('error')}
-
     WHOIS Info: {whois_data}
+    SSL Info: {ssl_data}
 
     Return verdict:
     - Safe ✅
@@ -83,10 +115,27 @@ def gemini_verdict(url, page_data, whois_data):
 
 def phishing_detector(url):
     """
-    Full pipeline: fetch page details, WHOIS info, AI verdict
+    Full pipeline: lexical features, page details, WHOIS info, SSL, AI verdict
     """
+    lexical_data = lexical_features(url)
     page_data = get_page_details(url)
     whois_data = check_whois(url)
-    verdict = gemini_verdict(url, page_data, whois_data)
+    ssl_data = ssl_info(url)
+    verdict = gemini_verdict(url, page_data, whois_data, lexical_data, ssl_data)
 
-    return page_data, whois_data, verdict
+    return {
+        "lexical_features": lexical_data,
+        "page_features": page_data,
+        "whois_data": whois_data,
+        "ssl_data": ssl_data,
+        "verdict": verdict
+    }
+
+
+# --- Streamlit Interface ---
+st.title("Fake URL Detector")
+input_url = st.text_input("Enter URL to check:")
+
+if st.button("Check URL") and input_url:
+    result = phishing_detector(input_url)
+    st.json(result)
