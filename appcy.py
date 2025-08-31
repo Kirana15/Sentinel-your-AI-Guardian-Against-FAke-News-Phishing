@@ -229,9 +229,13 @@ Reference:
 
 
     """)
+    st.markdown("Download the Cyber Dost – Awareness Document 
+Published by: 
+Ministry of Home Affairs, 
+Government of India ")
     with open("Cyber-security-tips-by-cyber-dost.pdf", "rb") as pdf_file:
         st.download_button(
-        label="Download Cyber Safety PDF",
+        label="Cyber Safety Tips by cyber dost",
         data=pdf_file,
         file_name="Cyber-security-tips-by-cyber-dost.pdf",
         mime="application/pdf"
@@ -252,6 +256,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
