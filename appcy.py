@@ -237,7 +237,7 @@ Reference:
         mime="application/pdf"
     )
 
-    )
+    
 
     
 
@@ -252,6 +252,7 @@ else:
     image = Image.open("assets/hero_image.jpg")
 
     st.image(image, width=200)
+
 
 
 
